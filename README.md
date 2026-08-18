@@ -58,22 +58,6 @@ Ragini_Portfolio/
 
 ```
 
-## 🚀 Getting Started
-git clone https://github.com/RaginiSingh2024/Ragini_Portfolio.git
-cd Ragini_Portfolio
-
-## 🌐 Live Portfolio
-Visit My Portfolio
-
- ## 🔗 Connect With Me
-LinkedIn: https://www.linkedin.com/in/ragini-singh-44236b319
-GitHub: https://github.com/RaginiSingh2024
-YouTube: https://www.youtube.com/@Developer_Ragini
-X (Twitter): https://x.com/RaginiSingh111
-Instagram: https://www.instagram.com/itz_ragini_singh111/
-
----
-
 ### ⭐ Thank You for Visiting!
 
 Thank you for taking the time to explore my portfolio and projects.
