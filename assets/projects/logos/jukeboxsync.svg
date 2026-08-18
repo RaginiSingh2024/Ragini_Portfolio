@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="jukeGradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="jukeGradAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded tile base -->
+  <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#jukeGradBg)" stroke="rgba(139, 92, 246, 0.35)" stroke-width="2" />
+  
+  <!-- Outer Sync / Frequency Orbit Arc -->
+  <path d="M 28 36 A 28 28 0 0 1 76 34" fill="none" stroke="url(#jukeGradAccent)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="2 6 12 4" />
+  <path d="M 72 64 A 28 28 0 0 1 24 66" fill="none" stroke="url(#jukeGradAccent)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="2 6 12 4" />
+  
+  <!-- Dynamic Waveform & Sync Music Note -->
+  <!-- Left Note Head -->
+  <ellipse cx="36" cy="62" rx="7" ry="5.5" transform="rotate(-20 36 62)" fill="url(#jukeGradAccent)" />
+  <!-- Right Note Head -->
+  <ellipse cx="64" cy="54" rx="7" ry="5.5" transform="rotate(-20 64 54)" fill="url(#jukeGradAccent)" />
+  
+  <!-- Note Stems -->
+  <path d="M 41 58 L 41 33" stroke="url(#jukeGradAccent)" stroke-width="4" stroke-linecap="round" />
+  <path d="M 69 50 L 69 25" stroke="url(#jukeGradAccent)" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- Synced Double Beam -->
+  <path d="M 41 33 L 69 25" stroke="url(#jukeGradAccent)" stroke-width="5" stroke-linecap="round" />
+  <path d="M 41 42 L 69 34" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Audio wave sync pulse dots -->
+  <circle cx="22" cy="50" r="2.5" fill="#38BDF8" />
+  <circle cx="78" cy="50" r="2.5" fill="#A855F7" />
+</svg>

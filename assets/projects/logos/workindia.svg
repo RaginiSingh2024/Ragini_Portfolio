@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wiGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066FF" />
+      <stop offset="100%" stop-color="#0040B8" />
+    </linearGradient>
+    <linearGradient id="wiGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00" />
+      <stop offset="100%" stop-color="#E04800" />
+    </linearGradient>
+  </defs>
+  <!-- Background subtle rounded shield/container -->
+  <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#wiGrad1)" />
+  <!-- Stylized geometric W with connect nodes -->
+  <path d="M22 30 L35 70 L50 44 L65 70 L78 30" fill="none" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Accent orange connectivity node -->
+  <circle cx="50" cy="44" r="5.5" fill="url(#wiGrad2)" stroke="#FFFFFF" stroke-width="2" />
+  <circle cx="78" cy="30" r="4.5" fill="url(#wiGrad2)" stroke="#FFFFFF" stroke-width="1.5" />
+</svg>

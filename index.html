@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragini Singh | Portfolio</title>
+    <meta name="description" content="Portfolio of Ragini Singh, Student, Software Engineer, and Full Stack Developer. Aspiring Software Engineer specializing in MERN stack, backend systems, and clean scalable architectures.">
+    <meta name="author" content="Ragini Singh">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Redesigned Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Devicon CDN for Technology Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+
+    <!-- 1. Intro Screen Overlay -->
+    <div class="intro-screen" id="intro-screen">
+        <div class="intro-content">
+            <h1 class="intro-title">
+                <span class="char" style="--char-index: 0">P</span>
+                <span class="char" style="--char-index: 1">O</span>
+                <span class="char" style="--char-index: 2">R</span>
+                <span class="char" style="--char-index: 3">T</span>
+                <span class="char" style="--char-index: 4">F</span>
+                <span class="char" style="--char-index: 5">O</span>
+                <span class="char" style="--char-index: 6">L</span>
+                <span class="char" style="--char-index: 7">I</span>
+                <span class="char" style="--char-index: 8">O</span>
+            </h1>
+            <div class="intro-line"></div>
+            <h2 class="intro-name">
+                <span class="char" style="--char-index: 0">R</span>
+                <span class="char" style="--char-index: 1">A</span>
+                <span class="char" style="--char-index: 2">G</span>
+                <span class="char" style="--char-index: 3">I</span>
+                <span class="char" style="--char-index: 4">N</span>
+                <span class="char" style="--char-index: 5">I</span>
+                <span class="char-space">&nbsp;</span>
+                <span class="char" style="--char-index: 6">S</span>
+                <span class="char" style="--char-index: 7">I</span>
+                <span class="char" style="--char-index: 8">N</span>
+                <span class="char" style="--char-index: 9">G</span>
+                <span class="char" style="--char-index: 10">H</span>
+            </h2>
+            <p class="intro-tagline">Student &bull; Software Engineer &bull; Full Stack Developer</p>
+            <button class="intro-enter-btn" id="enter-portfolio-btn" aria-label="Enter Portfolio Site">
+                <span>Enter Portfolio</span>
+                <svg class="enter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Website Wrapper (Initially hidden/blurred slightly) -->
+    <div class="portfolio-wrapper" id="portfolio-wrapper">
+        
+        <!-- Navigation Header -->
+        <header class="main-header" id="header">
+            <div class="nav-container">
+                <a href="#" class="logo" id="logo">
+                    <span class="logo-name">PORTFOLIO</span>
+                </a>
+                
+                <!-- Desktop Nav Links -->
+                <nav class="nav-links-desktop" aria-label="Main Navigation">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <!-- Resume Preview in Header (Opens PDF in new tab) -->
+                    <a href="assets/resume/Ragini-Singh-Resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="Resume Preview">
+                        <svg class="nav-resume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span>Resume Preview</span>
+                    </a>
+
+                    <!-- Dark/Light Theme Toggle -->
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Hamburger -->
+                    <button class="mobile-hamburger" id="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-drawer" id="mobile-menu" aria-hidden="true">
+            <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#experience" class="mobile-nav-link">Experience</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#education" class="mobile-nav-link">Education</a>
+                <a href="#certifications" class="mobile-nav-link">Certifications</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <a href="assets/resume/Ragini-Singh-Resume.pdf" class="mobile-nav-link mobile-resume-link" target="_blank" rel="noopener noreferrer">Resume Preview ↗</a>
+            </nav>
+        </div>
+
+        <!-- Main Document Body -->
+        <main>
+            
+            <!-- Hero / First Section -->
+            <section class="hero-section" id="hero">
+                <div class="hero-container">
+                    <div class="hero-text-content">
+                        <span class="hero-eyebrow">COMPUTER SCIENCE STUDENT / SOFTWARE ENGINEER</span>
+                        <h1 class="hero-title">
+                            <span class="greeting-line">Hi, I'm</span>
+                            <span class="name-line text-bold">RAGINI</span>
+                            <span class="name-line text-bold text-accent">SINGH.</span>
+                        </h1>
+                        <h2 class="hero-subtitle">Team Lead + Full Stack Developer &amp; Technical Engineer at REGNEX</h2>
+                        <p class="hero-lead">
+                            Building scalable web experiences, exploring backend engineering, and turning ideas into practical digital products.
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="assets/resume/Ragini-Singh-Resume.pdf" class="btn btn-secondary" target="_blank" download>
+                                Download Resume
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="hero-socials" id="hero-socials">
+                            <a href="https://github.com/RaginiSingh2024" class="hero-social-btn" data-platform="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ragini-singh-44236b319" class="hero-social-btn" data-platform="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/@Developer_Ragini" class="hero-social-btn" data-platform="youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+                                <svg viewBox="0 0 24 24"><path class="yt-bg" fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path class="yt-play" fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                            <a href="https://x.com/RaginiSingh111" class="hero-social-btn" data-platform="twitter" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/itz_ragini_singh111/?hl=en" class="hero-social-btn" data-platform="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                            <a href="https://discord.com/channels/@me" class="hero-social-btn" data-platform="discord" target="_blank" rel="noopener noreferrer" aria-label="Discord" title="Discord">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/></svg>
+                            </a>
+                            <a href="mailto:raginisingh.sejal@gmail.com" class="hero-social-btn" data-platform="email" aria-label="Email Me" title="Email Me">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image-content">
+                        <div class="hero-portrait-container">
+                            <div class="hero-portrait-wrapper">
+                                <img src="assets/profile/ragini_cropped_trimmed.png" alt="Ragini Singh - Portrait" class="hero-portrait-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section section-padding" id="about">
+                <div class="container grid-about">
+                    <div class="about-left-col scroll-trigger">
+                        <div class="about-image-wrapper">
+                            <img src="assets/profile/ragini_cropped_trimmed.png" alt="Ragini Singh - Portrait" class="about-profile-img">
+                        </div>
+                    </div>
+                    <div class="about-right-col scroll-trigger">
+                        <div class="about-section-header">
+                            <h2 class="about-title-main">ABOUT ME</h2>
+                        </div>
+                        <div class="about-text-content">
+                            <p class="about-intro-paragraph">
+                                Hi, I'm Ragini Singh. I'm a B.Tech Computer Science student at ITM Skills University with a strong interest in software engineering, full-stack development, and building practical real-world web applications.
+                            </p>
+                            <p class="about-body-paragraph">
+                                I currently work as a Technical Engineer at <strong>REGNEX</strong> and have hands-on experience in full-stack development, backend integration, product development, and technical collaboration. I primarily work with the MERN stack and have experience building applications involving REST APIs, role-based access systems, real-time communication using Socket.IO, database integration, and responsive web experiences.
+                            </p>
+                            <p class="about-body-paragraph">
+                                My strongest interests lie in backend systems engineering, database optimization, and building robust, scalable applications that solve concrete user needs. I love exploring new technologies and working on end-to-end product development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section section-padding" id="experience">
+                <div class="container">
+                    <div class="section-header scroll-trigger">
+                        <h2 class="section-title">EXPERIENCE</h2>
+                    </div>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-vertical-line"></div>
+                        
+                        <!-- Timeline Node 1 -->
+                        <div class="timeline-card-wrapper scroll-trigger">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <span class="timeline-period">Jun 2026 – Present</span>
+                                    <span class="timeline-type-badge badge-parttime">Part-Time</span>
+                                </div>
+                                <h3 class="timeline-card-role">Technical Engineer</h3>
+                                <span class="timeline-card-org">REGNEX – Smart Compliance Management</span>
+                                <span class="timeline-card-loc">Mumbai, Maharashtra, India · Remote</span>
+                                <p class="timeline-card-desc">
+                                    Collaborating with the CTO on product development, backend integration, and building new software features. Working primarily with the MERN stack, designing REST APIs, implementing secure role-based access, database integration, and real-time communication modules.
+                                </p>
+                                <div class="timeline-card-tags">
+                                    <span class="timeline-tag">Full-Stack Development</span>
+                                    <span class="timeline-tag">Backend Integration</span>
+                                    <span class="timeline-tag">MERN Stack</span>
+                                    <span class="timeline-tag">REST APIs</span>
+                                    <span class="timeline-tag">Role-Based Access</span>
+                                    <span class="timeline-tag">Socket.IO</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Node 2 -->
+                        <div class="timeline-card-wrapper scroll-trigger">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <span class="timeline-period">Nov 2025 – Present</span>
+                                    <span class="timeline-type-badge badge-internship">Internship</span>
+                                </div>
+                                <h3 class="timeline-card-role">Full Stack Developer Intern</h3>
+                                <span class="timeline-card-org">HARI OM THALASSIC PRIVATE LIMITED</span>
+                                <span class="timeline-loc">Mumbai, Maharashtra, India · Remote</span>
+                                <p class="timeline-card-desc">
+                                    Working as a Full Stack Developer Intern using the MERN stack. Contributing to frontend and backend development for production-ready full-stack applications, implementing REST APIs, and managing database connections.
+                                </p>
+                                <div class="timeline-card-tags">
+                                    <span class="timeline-tag">MERN Stack</span>
+                                    <span class="timeline-tag">React.js</span>
+                                    <span class="timeline-tag">Node.js</span>
+                                    <span class="timeline-tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Node 3 -->
+                        <div class="timeline-card-wrapper scroll-trigger">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <span class="timeline-period">Sep 2025 – Nov 2025</span>
+                                    <span class="timeline-type-badge badge-parttime">Part-Time</span>
+                                </div>
+                                <h3 class="timeline-card-role">Student Ambassador</h3>
+                                <span class="timeline-card-org">LetsUpgrade</span>
+                                <p class="timeline-card-desc">
+                                    Selected as a Student Ambassador for the September–November 2025 cohort. Promoted certification programs, engaged with the student community, and managed outreach operations.
+                                </p>
+                                <div class="timeline-card-tags">
+                                    <span class="timeline-tag">Community engagement</span>
+                                    <span class="timeline-tag">Outreach</span>
+                                    <span class="timeline-tag">Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Node 4 -->
+                        <div class="timeline-card-wrapper scroll-trigger">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <span class="timeline-period">Jul 2025</span>
+                                    <span class="timeline-type-badge badge-internship">Internship</span>
+                                </div>
+                                <h3 class="timeline-card-role">Internship – IT Education &amp; Skill Development</h3>
+                                <span class="timeline-card-org">Pragatee Foundation</span>
+                                <span class="timeline-loc">Navi Mumbai, Maharashtra, India · On-site</span>
+                                <p class="timeline-card-desc">
+                                    Contributed to community outreach and IT education initiatives. Developed communication, teamwork, and practical IT assistance experience during a one-month internship.
+                                </p>
+                                <div class="timeline-card-tags">
+                                    <span class="timeline-tag">IT Education</span>
+                                    <span class="timeline-tag">Teamwork</span>
+                                    <span class="timeline-tag">Community Outreach</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Node 5 -->
+                        <div class="timeline-card-wrapper scroll-trigger">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-header">
+                                    <span class="timeline-period">Dec 2024</span>
+                                    <span class="timeline-type-badge badge-internship">Internship</span>
+                                </div>
+                                <h3 class="timeline-card-role">Internship Marketing Department</h3>
+                                <span class="timeline-card-org">LetsUpgrade</span>
+                                <span class="timeline-loc">ITM Skills University · On-site</span>
+                                <p class="timeline-card-desc">
+                                    Completed a one-month internship in the marketing department, gaining exposure to campaign operations, corporate communication, and professional teamwork.
+                                </p>
+                                <div class="timeline-card-tags">
+                                    <span class="timeline-tag">Marketing</span>
+                                    <span class="timeline-tag">Collaboration</span>
+                                    <span class="timeline-tag">Communication</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Projects Section -->
+            <section class="projects-section section-padding" id="projects">
+                <div class="container">
+                    <div class="section-header scroll-trigger">
+                        <h2 class="section-title">PROJECTS</h2>
+                    </div>
+                    
+                    <p class="section-lead-desc scroll-trigger">
+                        A curated selection of products, platforms, and engineering projects I've built.
+                    </p>
+
+                    <!-- Dynamically Populated Project Cards List -->
+                    <div class="projects-list-container" id="projects-list-container">
+                        <!-- Populated dynamically by script.js -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills & Technologies Section -->
+            <section class="skills-section section-padding" id="skills">
+                <div class="container">
+                    <div class="section-header scroll-trigger">
+                        <h2 class="section-title">SKILLS &amp; TECHNOLOGIES</h2>
+                    </div>
+                    
+                    <p class="section-lead-desc scroll-trigger">
+                        Technologies, tools, and platforms I use to build modern software.
+                    </p>
+                    
+                    <div class="skills-groups-wrapper scroll-trigger" id="skills-grid-container">
+                        <!-- Populated dynamically by script.js -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education-section section-padding" id="education">
+                <div class="container">
+                    <div class="section-header scroll-trigger">
+                        <h2 class="section-title">EDUCATION</h2>
+                    </div>
+                    
+                    <div class="education-columns-wrapper">
+                        <!-- Education Card 1 -->
+                        <div class="education-column-card scroll-trigger">
+                            <div class="education-card-meta">
+                                <span class="education-card-date">2024 – 2028</span>
+                                <span class="education-card-status">Active</span>
+                            </div>
+                            <h3 class="education-card-degree">B.Tech — Computer Science</h3>
+                            <span class="education-card-inst">ITM Skills University</span>
+                            <div class="education-card-divider"></div>
+                            <p class="education-card-text">
+                                Practical-focused curriculum with hands-on labs, collaborative projects, coding meets, industry sessions, and hackathons.
+                            </p>
+                        </div>
+
+                        <!-- Education Card 2 -->
+                        <div class="education-column-card scroll-trigger">
+                            <div class="education-card-meta">
+                                <span class="education-card-date">Jul 2015 – Mar 2024</span>
+                                <span class="education-card-grade">Grade: 75%</span>
+                            </div>
+                            <h3 class="education-card-degree">12th PCM (Senior Secondary)</h3>
+                            <span class="education-card-inst">Ram Avadh Singh Inter College (UP Board)</span>
+                            <div class="education-card-divider"></div>
+                            <p class="education-card-text">
+                                Focus on Physics, Chemistry, and Mathematics. Active participation in dancing, singing, and drawing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section class="certifications-section section-padding" id="certifications">
+                <div class="container">
+                    <div class="section-header scroll-trigger">
+                        <h2 class="section-title">CERTIFICATIONS</h2>
+                    </div>
+                    
+                    <p class="section-lead-desc scroll-trigger">
+                        Professional certifications, courses, and credentials I've earned.
+                    </p>
+                    
+                    <!-- Filters Container -->
+                    <div class="cert-filters scroll-trigger" id="certifications-filters">
+                        <button class="cert-filter-btn active" data-filter="all">All</button>
+                        <button class="cert-filter-btn" data-filter="development">Development</button>
+                        <button class="cert-filter-btn" data-filter="ai-ml">AI / ML</button>
+                        <button class="cert-filter-btn" data-filter="cloud">Cloud</button>
+                        <button class="cert-filter-btn" data-filter="data">Data</button>
+                        <button class="cert-filter-btn" data-filter="blockchain">Blockchain</button>
+                        <button class="cert-filter-btn" data-filter="product">Product</button>
+                        <button class="cert-filter-btn" data-filter="professional">Professional</button>
+                        <button class="cert-filter-btn" data-filter="other">Other</button>
+                    </div>
+
+                    <!-- Dynamic Certifications Grid (Populated dynamically by script.js) -->
+                    <div class="certifications-grid-redesigned scroll-trigger" id="certifications-grid">
+                        <!-- Dynamically populated by script.js -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section section-padding" id="contact">
+                <div class="container grid-split contact-grid-wrapper">
+                    <div class="contact-info-side scroll-trigger">
+                        <h2 class="contact-hero-title text-accent">LET'S BUILD SOMETHING.</h2>
+                        <p class="contact-subtitle">
+                            Have an idea, opportunity, collaboration or project? Let's connect.
+                        </p>
+                        
+                        <div class="contact-direct-items">
+                            <a href="mailto:raginisingh.sejal@gmail.com" class="direct-contact-item direct-email-link" aria-label="Send email to Ragini Singh">
+                                <div class="contact-icon-circle email-icon-circle">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="contact-item-details">
+                                    <span class="direct-label">EMAIL DIRECTLY</span>
+                                    <span class="direct-val email-val">raginisingh.sejal@gmail.com</span>
+                                </div>
+                            </a>
+                            
+                            <div class="direct-contact-item direct-location-item">
+                                <div class="contact-icon-circle location-icon-circle">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="contact-item-details">
+                                    <span class="direct-label">CURRENTLY BASED</span>
+                                    <span class="direct-val location-val">Mumbai, Maharashtra, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Connect Social Area -->
+                        <div class="connect-social-container">
+                            <span class="direct-label">CONNECT WITH ME</span>
+                            <div class="connect-social-icons" id="connect-social-icons">
+                                <!-- Populated dynamically by script.js -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-side scroll-trigger">
+                        <form class="contact-form-element" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" placeholder="Enter your name" required>
+                                <span class="field-error-msg" id="name-error">Please enter your name</span>
+                            </div>
+                            <div class="form-row">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" placeholder="Enter your email" required>
+                                <span class="field-error-msg" id="email-error">Please enter a valid email address</span>
+                            </div>
+                            <div class="form-row">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" placeholder="How can I help you?" required></textarea>
+                                <span class="field-error-msg" id="message-error">Please enter your message</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
+                        </form>
+                        
+                        <!-- Success Notification Alert -->
+                        <div class="form-success-card" id="form-success-card">
+                            <span class="success-icon">✓</span>
+                            <h3>Thanks! The form is ready to connect.</h3>
+                            <p>I will get back to you shortly.</p>
+                            <button class="btn btn-secondary success-dismiss-btn" id="success-dismiss">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-upper">
+                    <span class="footer-logo">PORTFOLIO</span>
+                    <p class="footer-subtext">Student &bull; Software Engineer &bull; Full Stack Developer</p>
+                </div>
+                <div class="footer-lower">
+                    <p class="footer-copyright">&copy; 2026 Ragini Singh. All rights reserved.</p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/RaginiSingh2024" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/ragini-singh-44236b319" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.youtube.com/@Developer_Ragini" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        <a href="https://x.com/RaginiSingh111" target="_blank" rel="noopener noreferrer">X</a>
+                        <a href="https://www.instagram.com/itz_ragini_singh111/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="mailto:raginisingh.sejal@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Native dialog case studies details -->
+        <dialog class="project-modal" id="project-details-modal">
+            <div class="modal-wrapper">
+                <button class="modal-close-btn" id="modal-close" aria-label="Close modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="modal-body-container" id="modal-details-content">
+                    <!-- Injected dynamically by JS -->
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Native dialog certificate lightbox / PDF Viewer -->
+        <dialog class="cert-lightbox" id="cert-lightbox-modal">
+            <div class="lightbox-wrapper">
+                <div class="lightbox-header-bar">
+                    <div class="lightbox-header-info">
+                        <h4 class="lightbox-title-text" id="lightbox-title-text">Certificate Document</h4>
+                        <span class="lightbox-subtitle-text" id="lightbox-issuer-text">Verified Credential</span>
+                    </div>
+                    <div class="lightbox-controls">
+                        <a href="#" id="lightbox-open-tab" class="lightbox-ctrl-btn" target="_blank" rel="noopener noreferrer" title="Open PDF in New Tab">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            <span>Open in Tab</span>
+                        </a>
+                        <a href="#" id="lightbox-download-btn" class="lightbox-ctrl-btn" download title="Download Certificate PDF">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download</span>
+                        </a>
+                        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close viewer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="lightbox-body" id="lightbox-content">
+                    <!-- Injected dynamically by JS -->
+                </div>
+            </div>
+        </dialog>
+
+    </div>
+
+    <!-- Redesigned Interaction Script -->
+    <script src="script.js"></script>
+</body>
+</html>
