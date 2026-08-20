@@ -2,7 +2,7 @@
 
 > Personal portfolio website showcasing my skills, professional experience, projects, certifications, education, and technical journey.
 
-[🌐 Live Portfolio](https://ragini-portfolio-olive.vercel.app/) • [💼 LinkedIn](www.linkedin.com/in/ragini-singh-44236b319) • [🐙 GitHub](https://github.com/RaginiSingh2024) • [📧 Email](raginisingh.sejal@gmail.com)
+[🌐 Live Portfolio](https://ragini-portfolio-olive.vercel.app/) • [💼 LinkedIn](linkedin.com/in/ragini-singh-44236b319) • [🐙 GitHub](https://github.com/RaginiSingh2024) • [📧 Email](raginisingh.sejal@gmail.com)
 
 ---
 
